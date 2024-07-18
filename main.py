@@ -3,7 +3,7 @@ import tf_model
 import os
 
 model_url = 'https://drive.google.com/uc?export=download&id=1PUVyn7eSzAmtMF36mNHRPRFA0JVgAWY2'
-model_path = '/app/poseidon_lstm'
+model_path = 'poseidon_lstm'
 
 app = Flask(__name__)
 
