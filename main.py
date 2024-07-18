@@ -10,7 +10,6 @@ app = Flask(__name__)
 
 @app.route('/', methods=['GET', 'POST'])
 def main():
-    tf_model.download_and_extract_model(model_url, model_path)
     if request.method == 'POST':
         text = request.form['abstractText']
         sentences = tf_model.sentences(text)
@@ -22,4 +21,5 @@ def main():
         return render_template('index.html', segmented_abstract=None, original_text="")
 
 if __name__ == '__main__':
+    tf_model.download_and_extract_model(model_url, model_path)
     app.run(port=os.getenv("PORT", default=5000), debug=True)
