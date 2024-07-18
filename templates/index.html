@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medical Abstract Segmenter</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <h2 class="mb-4">Segment Medical Abstract</h2>
+        <form method="POST">
+            <div class="form-group">
+                <label for="abstractText">Enter Medical Abstract:</label>
+                <textarea class="form-control" id="abstractText" name="abstractText" rows="6" placeholder="Paste the medical abstract text here..."></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Segment</button>
+        </form>
+
+        <div class="result mt-5">
+            <h4>Original Text</h4>
+            {% if original_text %}
+                <p>{{ original_text }}</p>
+            {% else %}
+                <p>No abstract provided. Please enter a medical abstract above.</p>
+            {% endif %}
+
+            <h4>Segmented Abstract</h4>
+            {% if segmented_abstract %}
+                <div>
+                   <pre style="white-space: pre-wrap; word-wrap: break-word;">{{ segmented_abstract | safe }}</pre>
+                </div>
+            {% else %}
+                <p>Enter and submit a medical abstract to see the segmentation.</p>
+            {% endif %}
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
