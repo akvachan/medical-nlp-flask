@@ -1,8 +1,14 @@
-## Usage ##
+## medical-nlp-flask
+
+Flask web interface for medical senctence segmentation model.
+
+## Usage
 
 1. Clone repo `git clone https://github.com/akvachan/Flask-MAS.git`
 2. Go into directory `cd Flask-MAS`
 3. Install Python requirements `pip install -r requirements.txt`
 4. Start the server for development `python3 main.py`
 
-Warning: Was only locally tested on MacOS
+## WARNING
+
+Only locally tested on MacOS.
