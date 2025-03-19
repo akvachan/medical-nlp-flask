@@ -1,6 +1,6 @@
 ## medical-nlp-flask
 
-Flask web interface for medical senctence segmentation model.
+Flask web interface for medical sentence segmentation model.
 
 ## Usage
 
